@@ -1,10 +1,10 @@
 import React from 'react'
-import Chart from '../components/chart/Chart'
-import FeatureInfo from '../components/featureInfo/FeatureInfo'
+import Chart from '../../components/chart/Chart'
+import FeatureInfo from '../../components/featureInfo/FeatureInfo'
 import "./Home.css";
-import { userData } from "../../src/dummyData"
-import WidgetSmall from '../components/widgetSmall/WidgetSmall';
-import WidgetLarge from '../components/widgetLarge/WidgetLarge';
+import { userData } from "../../dummyData"
+import WidgetSmall from '../../components/widgetSmall/WidgetSmall';
+import WidgetLarge from '../../components/widgetLarge/WidgetLarge';
 
 export default function Home() {
     return (

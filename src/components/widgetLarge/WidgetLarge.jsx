@@ -40,7 +40,7 @@ export default function WidgetLarge() {
                     <td className="widgetLargeDate">2 Jun 2021</td>
                     <td className="widgetLargeAmount">$60000</td>
                     <td className="widgetLargeStatus">
-                        <Button type="Decline" />
+                        <Button type="Declined" />
                     </td>
                 </tr>
                 <tr className="widgetLargeTr">
