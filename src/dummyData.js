@@ -49,3 +49,86 @@ export const userData = [
     },
 ];
 
+
+export const userRows = [
+    {
+        id: 1,
+        username: 'Baig',
+        avatar: '',
+        email: 'baig@gmail.com',
+        status: 'active',
+        transaction: '$4400.00'
+    },
+    {
+        id: 2,
+        username: 'Baig',
+        avatar: '',
+        email: 'baig@gmail.com',
+        status: 'active',
+        transaction: '$4400.00'
+    },
+    {
+        id: 3,
+        username: 'Baig',
+        avatar: '',
+        email: 'baig@gmail.com',
+        status: 'active',
+        transaction: '$4400.00'
+    },
+    {
+        id: 4,
+        username: 'Baig',
+        avatar: '',
+        email: 'baig@gmail.com',
+        status: 'active',
+        transaction: '$4400.00'
+    },
+    {
+        id: 5,
+        username: 'Baig',
+        avatar: '',
+        email: 'baig@gmail.com',
+        status: 'active',
+        transaction: '$4400.00'
+    },
+    {
+        id: 6,
+        username: 'Baig',
+        avatar: '',
+        email: 'baig@gmail.com',
+        status: 'active',
+        transaction: '$4400.00'
+    },
+    {
+        id: 7,
+        username: 'Baig',
+        avatar: '',
+        email: 'baig@gmail.com',
+        status: 'active',
+        transaction: '$4400.00'
+    },
+    {
+        id: 8,
+        username: 'Baig',
+        avatar: '',
+        email: 'baig@gmail.com',
+        status: 'active',
+        transaction: '$4400.00'
+    },
+    {
+        id: 9,
+        username: 'Baig',
+        avatar: '',
+        email: 'baig@gmail.com',
+        status: 'active',
+        transaction: '$4400.00'
+    },
+    {
+        id: 10,
+        username: 'Baig',
+        avatar: '',
+        email: 'baig@gmail.com',
+        status: 'active',
+        transaction: '$4400.00'
+    },
+];

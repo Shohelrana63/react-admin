@@ -1,10 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react';
 import "./UserList.css";
 import { DataGrid } from '@material-ui/data-grid';
 import img from "../../images/shohelrana.png";
 import { DeleteOutline } from "@material-ui/icons";
+import { userRows } from "../../dummyData";
+import { Link } from "react-router-dom";
 
 export default function UserList() {
+    const [data, setData] = useState(userRows);
+
+    const handleDelete = (id) => {
+        console.log("id found");
+        setData(data.filter((item) => item.id !== id));
+    };
+
     const columns = [
         { field: 'id', headerName: 'ID', width: 90 },
         {
@@ -36,8 +45,14 @@ export default function UserList() {
             renderCell: (params) => {
                 return (
                     <>
-                        <button className="userListEdit">Edit</button>
-                        <DeleteOutline className="userListDelete" />
+                        <Link to={"/user/" + params.row.id}>
+                            <button className="userListEdit">Edit</button>
+                        </Link>
+                        <DeleteOutline className="userListDelete"
+                            onClick={() =>
+                                // console.log("delete button working")
+                                handleDelete(params.row.id)
+                            } />
                     </>
                 )
             }
@@ -45,91 +60,9 @@ export default function UserList() {
 
     ];
 
-    const rows = [
-        {
-            id: 1,
-            username: 'Baig',
-            avatar: '',
-            email: 'baig@gmail.com',
-            status: 'active',
-            transaction: '$4400.00'
-        },
-        {
-            id: 2,
-            username: 'Baig',
-            avatar: '',
-            email: 'baig@gmail.com',
-            status: 'active',
-            transaction: '$4400.00'
-        },
-        {
-            id: 3,
-            username: 'Baig',
-            avatar: '',
-            email: 'baig@gmail.com',
-            status: 'active',
-            transaction: '$4400.00'
-        },
-        {
-            id: 4,
-            username: 'Baig',
-            avatar: '',
-            email: 'baig@gmail.com',
-            status: 'active',
-            transaction: '$4400.00'
-        },
-        {
-            id: 5,
-            username: 'Baig',
-            avatar: '',
-            email: 'baig@gmail.com',
-            status: 'active',
-            transaction: '$4400.00'
-        },
-        {
-            id: 6,
-            username: 'Baig',
-            avatar: '',
-            email: 'baig@gmail.com',
-            status: 'active',
-            transaction: '$4400.00'
-        },
-        {
-            id: 7,
-            username: 'Baig',
-            avatar: '',
-            email: 'baig@gmail.com',
-            status: 'active',
-            transaction: '$4400.00'
-        },
-        {
-            id: 8,
-            username: 'Baig',
-            avatar: '',
-            email: 'baig@gmail.com',
-            status: 'active',
-            transaction: '$4400.00'
-        },
-        {
-            id: 9,
-            username: 'Baig',
-            avatar: '',
-            email: 'baig@gmail.com',
-            status: 'active',
-            transaction: '$4400.00'
-        },
-        {
-            id: 10,
-            username: 'Baig',
-            avatar: '',
-            email: 'baig@gmail.com',
-            status: 'active',
-            transaction: '$4400.00'
-        },
-    ];
     return (
         <div className="userList">
-            <DataGrid disableSelectionOnClick rows={rows} columns={columns} pageSize={8} checkboxSelection />
+            <DataGrid disableSelectionOnClick rows={data} columns={columns} pageSize={8} checkboxSelection />
         </div>
     )
 }
