@@ -11,6 +11,7 @@ import {
 import UserList from "./pages/userList/UserList";
 import Home from "./pages/Home/Home";
 import User from "./pages/user/User";
+import NewUser from "./pages/newUser/NewUser";
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
           </Route>
           <Route path="/user/:userId">
             <User />
+          </Route>
+          <Route path="/newUser">
+            <NewUser />
           </Route>
         </Switch>
       </div>
