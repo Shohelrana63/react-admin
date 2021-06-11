@@ -14,6 +14,8 @@ import {
     WorkOutline,
     Report,
 } from "@material-ui/icons"
+import { Link } from "react-router-dom";
+
 export default function Sidebar() {
     return (
         <div className="sidebar">
@@ -25,15 +27,15 @@ export default function Sidebar() {
                     <ul className="sidebarList">
                         <li className="sidebarListItem active">
                             <LineStyle className="sidebarIcon" />
-                             home
+                            home
                         </li>
                         <li className="sidebarListItem">
                             <Timeline className="sidebarIcon" />
-                             Analytic
+                            Analytic
                         </li>
                         <li className="sidebarListItem">
                             <TrendingUp className="sidebarIcon" />
-                             Sales
+                            Sales
                         </li>
                     </ul>
                 </div>
@@ -42,21 +44,25 @@ export default function Sidebar() {
                         Quick Menu
                     </h3>
                     <ul className="sidebarList">
-                        <li className="sidebarListItem">
-                            <PermIdentity className="sidebarIcon" />
-                                 Users
-                        </li>
-                        <li className="sidebarListItem">
-                            <Storefront className="sidebarIcon" />
-                              Products
-                        </li>
+                        <Link to="/users" className="link">
+                            <li className="sidebarListItem">
+                                <PermIdentity className="sidebarIcon" />
+                                Users
+                            </li>
+                        </Link>
+                        <Link to="/products" className="link">
+                            <li className="sidebarListItem">
+                                <Storefront className="sidebarIcon" />
+                                Products
+                            </li>
+                        </Link>
                         <li className="sidebarListItem">
                             <AttachMoney className="sidebarIcon" />
-                             Transactions
+                            Transactions
                         </li>
                         <li className="sidebarListItem">
                             <BarChart className="sidebarIcon" />
-                         Reports
+                            Reports
                         </li>
                     </ul>
                 </div>
@@ -67,15 +73,15 @@ export default function Sidebar() {
                     <ul className="sidebarList">
                         <li className="sidebarListItem">
                             <MailOutline className="sidebarIcon" />
-                              Mail
+                            Mail
                         </li>
                         <li className="sidebarListItem">
                             <DynamicFeed className="sidebarIcon" />
-                              Feedback
+                            Feedback
                         </li>
                         <li className="sidebarListItem">
                             <ChatBubbleOutline className="sidebarIcon" />
-                              Messages
+                            Messages
                         </li>
                     </ul>
                 </div>
@@ -86,15 +92,15 @@ export default function Sidebar() {
                     <ul className="sidebarList">
                         <li className="sidebarListItem ">
                             <WorkOutline className="sidebarIcon" />
-                               Manage
+                            Manage
                         </li>
                         <li className="sidebarListItem">
                             <Timeline className="sidebarIcon" />
-                               Analytics
+                            Analytics
                         </li>
                         <li className="sidebarListItem">
                             <Report className="sidebarIcon" />
-                                Reports
+                            Reports
                         </li>
                     </ul>
                 </div>
